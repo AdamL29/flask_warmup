@@ -55,7 +55,7 @@ def run_statement(statement, args=[]):
         statement (str): A valid SWL quey
         args (list, option): The list of arguments. Defaults to []
     """
-    cursor = connect_db
+    cursor = connect_db()
     if (cursor == None):
         print("Failed to connect to the DB, statement will not run")
         return None
